@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Downloads | YourTigranMods Tools</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background: linear-gradient(135deg, #0a0a1a, #1a1a2e);
+            color: #fff;
+            min-height: 100vh;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 30px 20px;
+        }
+        
+        header {
+            text-align: center;
+            padding: 40px 0;
+        }
+        
+        .logo {
+            font-size: 3.5rem;
+            background: linear-gradient(90deg, #00eeff, #0080ff);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            font-weight: 900;
+            margin-bottom: 10px;
+        }
+        
+        .page-title {
+            font-size: 2.8rem;
+            color: white;
+            margin-bottom: 20px;
+        }
+        
+        .back-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 12px 25px;
+            background: rgba(0, 238, 255, 0.1);
+            border: 2px solid #00eeff;
+            border-radius: 10px;
+            color: #00eeff;
+            text-decoration: none;
+            margin-bottom: 40px;
+            transition: all 0.3s;
+        }
+        
+        .back-btn:hover {
+            background: rgba(0, 238, 255, 0.2);
+            transform: translateX(-5px);
+        }
+        
+        .downloads-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+        
+        .download-card {
+            background: rgba(30, 30, 60, 0.8);
+            border-radius: 20px;
+            padding: 30px;
+            border: 2px solid rgba(0, 238, 255, 0.2);
+            transition: all 0.3s;
+        }
+        
+        .download-card:hover {
+            border-color: #00eeff;
+            transform: translateY(-5px);
+        }
+        
+        .download-header {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            margin-bottom: 20px;
+        }
+        
+        .download-icon {
+            font-size: 2.5rem;
+            color: #00eeff;
+        }
+        
+        .download-title {
+            font-size: 1.8rem;
+            color: white;
+        }
+        
+        .download-version {
+            color: #aaa;
+            font-size: 0.9rem;
+        }
+        
+        .download-desc {
+            color: #ccc;
+            margin-bottom: 25px;
+            line-height: 1.6;
+        }
+        
+        .download-meta {
+            display: flex;
+            gap: 20px;
+            margin-bottom: 25px;
+            color: #aaa;
+            font-size: 0.9rem;
+        }
+        
+        .download-btn {
+            display: block;
+            width: 100%;
+            padding: 16px;
+            background: linear-gradient(90deg, #0080ff, #00eeff);
+            border: none;
+            border-radius: 10px;
+            color: white;
+            font-size: 1.2rem;
+            font-weight: bold;
+            text-align: center;
+            text-decoration: none;
+            transition: all 0.3s;
+        }
+        
+        .download-btn:hover {
+            background: linear-gradient(90deg, #00eeff, #0080ff);
+            box-shadow: 0 10px 20px rgba(0, 238, 255, 0.3);
+        }
+        
+        .warning-box {
+            background: rgba(255, 100, 100, 0.1);
+            border: 2px solid #ff6464;
+            border-radius: 15px;
+            padding: 25px;
+            margin: 50px 0;
+            text-align: center;
+        }
+        
+        .warning-title {
+            color: #ff6464;
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+        }
+        
+        footer {
+            text-align: center;
+            margin-top: 80px;
+            padding-top: 40px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            color: #888;
+        }
+        
+        @media (max-width: 768px) {
+            .logo {
+                font-size: 2.5rem;
+            }
+            
+            .page-title {
+                font-size: 2rem;
+            }
+            
+            .downloads-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1 class="logo">YOURTIGRANMODS</h1>
+            <h2 class="page-title">Downloads Center</h2>
+            <p style="color: #aaa; max-width: 600px; margin: 0 auto 40px;">
+                Download the latest versions of our tools and utilities
+            </p>
+            
+            <a href="index.html" class="back-btn">
+                <i class="fas fa-arrow-left"></i> Back to Home
+            </a>
+        </header>
+        
+        <div class="warning-box">
+            <h3 class="warning-title"><i class="fas fa-exclamation-triangle"></i> IMPORTANT NOTICE</h3>
+            <p>All tools are for educational and research purposes only. Use at your own risk.</p>
+            <p style="margin-top: 10px; font-size: 0.9rem;">Always scan downloaded files with antivirus software.</p>
+        </div>
+        
+        <div class="downloads-grid">
+            <div class="download-card">
+                <div class="download-header">
+                    <div class="download-icon">
+                        <i class="fas fa-fire"></i>
+                    </div>
+                    <div>
+                        <h3 class="download-title">Free Fire MAX Tool</h3>
+                        <p class="download-version">Version 2.4.1 | Updated: 2024-03-15</p>
+                    </div>
+                </div>
+                <p class="download-desc">
+                    Complete tool for Free Fire MAX with ESP, Aimbot, and anti-detection features.
+                    Supports latest game version.
+                </p>
+                <div class="download-meta">
+                    <span><i class="fas fa-hdd"></i> 15.2 MB</span>
+                    <span><i class="fas fa-download"></i> 12,458 downloads</span>
+                    <span><i class="fas fa-check-circle"></i> Virus-free</span>
+                </div>
+                <a href="#" class="download-btn" onclick="alert('Download simulation - File would download in real implementation')">
+                    <i class="fas fa-download"></i> Download Tool
+                </a>
+            </div>
+            
+            <div class="download-card">
+                <div class="download-header">
+                    <div class="download-icon">
+                        <i class="fas fa-mobile-alt"></i>
+                    </div>
+                    <div>
+                        <h3 class="download-title">Android Emulator Setup</h3>
+                        <p class="download-version">Version 1.2.0 | Updated: 2024-02-28</p>
+                    </div>
+                </div>
+                <p class="download-desc">
+                    Complete guide and configuration files for setting up Android emulators
+                    (LDPlayer, BlueStacks, Gameloop).
+                </p>
+                <div class="download-meta">
+                    <span><i class="fas fa-hdd"></i> 8.7 MB</span>
+                    <span><i class="fas fa-download"></i> 8,921 downloads</span>
+                    <span><i class="fas fa-file-pdf"></i> PDF Guide included</span>
+                </div>
+                <a href="#" class="download-btn" onclick="alert('Download simulation')">
+                    <i class="fas fa-download"></i> Download Setup
+                </a>
+            </div>
+            
+            <div class="download-card">
+                <div class="download-header">
+                    <div class="download-icon">
+                        <i class="fas fa-key"></i>
+                    </div>
+                    <div>
+                        <h3 class="download-title">Key Generator (Standalone)</h3>
+                        <p class="download-version">Version 1.0.3 | Updated: 2024-03-10</p>
+                    </div>
+                </div>
+                <p class="download-desc">
+                    Offline key generator application. Works without internet connection.
+                    Generate unlimited keys for testing.
+                </p>
+                <div class="download-meta">
+                    <span><i class="fas fa-hdd"></i> 5.3 MB</span>
+                    <span><i class="fas fa-download"></i> 5,234 downloads</span>
+                    <span><i class="fas fa-desktop"></i> Windows only</span>
+                </div>
+                <a href="#" class="download-btn" onclick="alert('Download simulation')">
+                    <i class="fas fa-download"></i> Download Generator
+                </a>
+            </div>
+            
+            <div class="download-card">
+                <div class="download-header">
+                    <div class="download-icon">
+                        <i class="fas fa-wrench"></i>
+                    </div>
+                    <div>
+                        <h3 class="download-title">Configuration Tool</h3>
+                        <p class="download-version">Version 1.1.5 | Updated: 2024-03-05</p>
+                    </div>
+                </div>
+                <p class="download-desc">
+                    Advanced configuration editor for customizing tool settings.
+                    Edit JSON configs with GUI interface.
+                </p>
+                <div class="download-meta">
+                    <span><i class="fas fa-hdd"></i> 3.8 MB</span>
+                    <span><i class="fas fa-download"></i> 3,112 downloads</span>
+                    <span><i class="fas fa-palette"></i> Custom themes</span>
+                </div>
+                <a href="#" class="download-btn" onclick="alert('Download simulation')">
+                    <i class="fas fa-download"></i> Download Config Tool
+                </a>
+            </div>
+            
+            <div class="download-card">
+                <div class="download-header">
+                    <div class="download-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <div>
+                        <h3 class="download-title">Anti-Detection Patch</h3>
+                        <p class="download-version">Version 2.0.0 | Updated: 2024-03-12</p>
+                    </div>
+                </div>
+                <p class="download-desc">
+                    Security patch to enhance tool stealth and avoid detection.
+                    Regular updates for new anti-cheat systems.
+                </p>
+                <div class="download-meta">
+                    <span><i class="fas fa-hdd"></i> 2.1 MB</span>
+                    <span><i class="fas fa-download"></i> 9,876 downloads</span>
+                    <span><i class="fas fa-sync-alt"></i> Auto-update</span>
+                </div>
+                <a href="#" class="download-btn" onclick="alert('Download simulation')">
+                    <i class="fas fa-download"></i> Download Patch
+                </a>
+            </div>
+            
+            <div class="download-card">
+                <div class="download-header">
+                    <div class="download-icon">
+                        <i class="fas fa-book"></i>
+                    </div>
+                    <div>
+                        <h3 class="download-title">Documentation Pack</h3>
+                        <p class="download-version">Version 1.0.0 | Updated: 2024-01-20</p>
+                    </div>
+                </div>
+                <p class="download-desc">
+                    Complete documentation, tutorials, and FAQ in PDF format.
+                    Includes setup guides and troubleshooting.
+                </p>
+                <div class="download-meta">
+                    <span><i class="fas fa-hdd"></i> 25.4 MB</span>
+                    <span><i class="fas fa-download"></i> 7,543 downloads</span>
+                    <span><i class="fas fa-file-pdf"></i> PDF format</span>
+                </div>
+                <a href="#" class="download-btn" onclick="alert('Download simulation')">
+                    <i class="fas fa-download"></i> Download Docs
+                </a>
+            </div>
+        </div>
+        
+        <div class="warning-box" style="background: rgba(0, 238, 255, 0.1); border-color: #00eeff;">
+            <h3 class="warning-title" style="color: #00eeff;"><i class="fas fa-info-circle"></i> INSTALLATION GUIDE</h3>
+            <p>1. Download the tool file<br>
+               2. Extract ZIP archive with password: <strong>tigran2024</strong><br>
+               3. Run setup.exe as Administrator<br>
+               4. Follow on-screen instructions<br>
+               5. Launch tool and enjoy!</p>
+        </div>
+        
+        <footer>
+            <p>© 2024 YourTigranMods Tools. All downloads are provided "as is" without warranty.</p>
+            <p style="margin-top: 10px; font-size: 0.9rem;">
+                <i class="fas fa-shield-alt"></i> All files are scanned for viruses before upload.
+            </p>
+        </footer>
+    </div>
+</body>
+</html>
