@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FF Max Premium Tools - Key Generator</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background: linear-gradient(135deg, #0c0c0c, #1a1a2e);
+            color: #fff;
+            min-height: 100vh;
+            overflow-x: hidden;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        header {
+            text-align: center;
+            padding: 40px 0;
+            border-bottom: 2px solid #00eeff;
+            margin-bottom: 40px;
+        }
+        
+        .logo {
+            font-size: 3.5rem;
+            background: linear-gradient(90deg, #00eeff, #0080ff);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            font-weight: 900;
+            margin-bottom: 10px;
+            text-shadow: 0 0 15px rgba(0, 238, 255, 0.5);
+        }
+        
+        .subtitle {
+            font-size: 1.2rem;
+            color: #aaa;
+            margin-bottom: 20px;
+        }
+        
+        .main-card {
+            background: rgba(20, 20, 40, 0.9);
+            border-radius: 20px;
+            padding: 40px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.7);
+            border: 1px solid #00eeff33;
+            margin-bottom: 30px;
+        }
+        
+        .card-title {
+            font-size: 2rem;
+            color: #00eeff;
+            margin-bottom: 25px;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+        
+        .card-title i {
+            font-size: 2.5rem;
+        }
+        
+        .input-group {
+            margin-bottom: 25px;
+        }
+        
+        .input-label {
+            display: block;
+            margin-bottom: 10px;
+            color: #ccc;
+            font-size: 1.1rem;
+        }
+        
+        .custom-select {
+            width: 100%;
+            padding: 15px;
+            background: rgba(10, 10, 30, 0.8);
+            border: 2px solid #0080ff;
+            border-radius: 10px;
+            color: white;
+            font-size: 1.1rem;
+            outline: none;
+            cursor: pointer;
+        }
+        
+        .custom-select option {
+            background: #1a1a2e;
+            color: white;
+            padding: 10px;
+        }
+        
+        .generate-btn {
+            width: 100%;
+            padding: 18px;
+            background: linear-gradient(90deg, #0080ff, #00eeff);
+            border: none;
+            border-radius: 12px;
+            color: white;
+            font-size: 1.3rem;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s;
+            margin-top: 20px;
+            letter-spacing: 1px;
+        }
+        
+        .generate-btn:hover {
+            background: linear-gradient(90deg, #00eeff, #0080ff);
+            box-shadow: 0 0 25px rgba(0, 238, 255, 0.7);
+            transform: translateY(-3px);
+        }
+        
+        .key-display {
+            background: rgba(10, 10, 30, 0.9);
+            border: 2px dashed #00eeff;
+            border-radius: 12px;
+            padding: 25px;
+            margin-top: 30px;
+            text-align: center;
+            display: none;
+        }
+        
+        .key-title {
+            color: #00eeff;
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+        }
+        
+        .key-code {
+            font-size: 1.8rem;
+            font-family: monospace;
+            background: rgba(0, 0, 0, 0.5);
+            padding: 15px;
+            border-radius: 8px;
+            margin: 15px 0;
+            color: #00ff88;
+            letter-spacing: 2px;
+            word-break: break-all;
+        }
+        
+        .copy-btn {
+            padding: 12px 30px;
+            background: #0080ff;
+            border: none;
+            border-radius: 8px;
+            color: white;
+            font-size: 1.1rem;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+        
+        .copy-btn:hover {
+            background: #00eeff;
+        }
+        
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+            margin-top: 40px;
+        }
+        
+        .feature-card {
+            background: rgba(30, 30, 60, 0.8);
+            padding: 25px;
+            border-radius: 15px;
+            border-left: 5px solid #00eeff;
+        }
+        
+        .feature-card h3 {
+            color: #00eeff;
+            margin-bottom: 15px;
+            font-size: 1.5rem;
+        }
+        
+        .feature-card p {
+            color: #ccc;
+            line-height: 1.6;
+        }
+        
+        footer {
+            text-align: center;
+            margin-top: 50px;
+            padding: 30px;
+            border-top: 1px solid #333;
+            color: #888;
+            font-size: 0.9rem;
+        }
+        
+        .status {
+            padding: 15px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            text-align: center;
+            font-weight: bold;
+            display: none;
+        }
+        
+        .status.success {
+            background: rgba(0, 255, 136, 0.2);
+            color: #00ff88;
+            border: 1px solid #00ff88;
+        }
+        
+        .status.error {
+            background: rgba(255, 0, 68, 0.2);
+            color: #ff0044;
+            border: 1px solid #ff0044;
+        }
+        
+        .loader {
+            border: 5px solid rgba(255, 255, 255, 0.2);
+            border-top: 5px solid #00eeff;
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            animation: spin 1s linear infinite;
+            margin: 20px auto;
+            display: none;
+        }
+        
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        
+        @media (max-width: 768px) {
+            .container {
+                padding: 15px;
+            }
+            
+            .logo {
+                font-size: 2.5rem;
+            }
+            
+            .main-card {
+                padding: 25px;
+            }
+            
+            .features {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1 class="logo">FF MAX ARM TOOLS</h1>
+            <p class="subtitle">OFFICIAL PREMIUM KEY GENERATOR • 100% WORKING • UPDATED 2024</p>
+        </header>
+        
+        <div class="main-card">
+            <h2 class="card-title"><i class="fas fa-key"></i> GENERATE YOUR FREE KEY</h2>
+            
+            <div class="status" id="status"></div>
+            <div class="loader" id="loader"></div>
+            
+            <div class="input-group">
+                <label class="input-label"><i class="fas fa-gamepad"></i> SELECT GAME VERSION</label>
+                <select class="custom-select" id="gameVersion">
+                    <option value="ffmax">Free Fire MAX (Latest)</option>
+                    <option value="ffob">Free Fire OB42</option>
+                    <option value="ffindia">Free Fire India</option>
+                    <option value="ffadvanced">Free Fire Advanced</option>
+                </select>
+            </div>
+            
+            <div class="input-group">
+                <label class="input-label"><i class="fas fa-gem"></i> SELECT PLAN</label>
+                <select class="custom-select" id="plan">
+                    <option value="basic">BASIC (7 Days) - ESP Only</option>
+                    <option value="pro" selected>PRO (30 Days) - ESP + Aimbot</option>
+                    <option value="ultimate">ULTIMATE (Lifetime) - All Features + Wallhack</option>
+                </select>
+            </div>
+            
+            <div class="input-group">
+                <label class="input-label"><i class="fas fa-hashtag"></i> NUMBER OF KEYS</label>
+                <select class="custom-select" id="keyCount">
+                    <option value="1">1 Key</option>
+                    <option value="2">2 Keys</option>
+                    <option value="5">5 Keys</option>
+                    <option value="10">10 Keys</option>
+                </select>
+            </div>
+            
+            <button class="generate-btn" id="generateBtn">
+                <i class="fas fa-bolt"></i> GENERATE ACTIVATION KEY
+            </button>
+            
+            <div class="key-display" id="keyDisplay">
+                <h3 class="key-title"><i class="fas fa-gift"></i> YOUR GENERATED KEY</h3>
+                <p>Copy this key and use it in the tool. Valid for 24 hours.</p>
+                <div class="key-code" id="keyCode">XXXX-XXXX-XXXX-XXXX</div>
+                <button class="copy-btn" id="copyBtn"><i class="fas fa-copy"></i> COPY KEY</button>
+                <p style="margin-top: 15px; font-size: 0.9rem; color: #aaa;">
+                    <i class="fas fa-shield-alt"></i> Key encrypted • Server-side validation required
+                </p>
+            </div>
+        </div>
+        
+        <div class="features">
+            <div class="feature-card">
+                <h3><i class="fas fa-eye"></i> ESP SYSTEM</h3>
+                <p>See enemies through walls with customized ESP boxes, health bars, distance, and lines.</p>
+            </div>
+            
+            <div class="feature-card">
+                <h3><i class="fas fa-crosshairs"></i> SMART AIMBOT</h3>
+                <p>Auto headshot with customizable FOV, smoothness, and target selection. Undetectable.</p>
+            </div>
+            
+            <div class="feature-card">
+                <h3><i class="fas fa-user-shield"></i> ANTI-BAN</h3>
+                <p>Built-in protection against detection. Memory cleaner and signature spoofer included.</p>
+            </div>
+        </div>
+        
+        <footer>
+            <p>© 2024 FF MAX ARM TOOLS OFFICIAL • This tool is for educational purposes only.</p>
+            <p>We are not affiliated with Garena Free Fire. Use at your own risk.</p>
+        </footer>
+    </div>
+    
+    <script>
+        document.getElementById('generateBtn').addEventListener('click', function() {
+            const loader = document.getElementById('loader');
+            const status = document.getElementById('status');
+            const keyDisplay = document.getElementById('keyDisplay');
+            const keyCode = document.getElementById('keyCode');
+            
+            // Show loader
+            loader.style.display = 'block';
+            status.style.display = 'none';
+            keyDisplay.style.display = 'none';
+            
+            // Simulate generation delay
+            setTimeout(() => {
+                loader.style.display = 'none';
+                
+                // Generate random key
+                const chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789';
+                let key = '';
+                for (let i = 0; i < 16; i++) {
+                    if (i > 0 && i % 4 === 0) key += '-';
+                    key += chars.charAt(Math.floor(Math.random() * chars.length));
+                }
+                
+                keyCode.textContent = key;
+                keyDisplay.style.display = 'block';
+                
+                // Show success
+                status.textContent = '✓ Key generated successfully! Valid for 24 hours.';
+                status.className = 'status success';
+                status.style.display = 'block';
+                
+                // Scroll to key
+                keyDisplay.scrollIntoView({ behavior: 'smooth' });
+            }, 2000);
+        });
+        
+        document.getElementById('copyBtn').addEventListener('click', function() {
+            const key = document.getElementById('keyCode').textContent;
+            navigator.clipboard.writeText(key).then(() => {
+                const btn = this;
+                btn.innerHTML = '<i class="fas fa-check"></i> COPIED!';
+                btn.style.background = '#00ff88';
+                setTimeout(() => {
+                    btn.innerHTML = '<i class="fas fa-copy"></i> COPY KEY';
+                    btn.style.background = '';
+                }, 2000);
+            });
+        });
+        
+        // Fake visitor count
+        window.addEventListener('DOMContentLoaded', () => {
+            const count = Math.floor(Math.random() * 5000) + 15000;
+            document.querySelector('.subtitle').innerHTML += ` • ${count.toLocaleString()} Keys Generated Today`;
+        });
+    </script>
+</body>
+</html>
